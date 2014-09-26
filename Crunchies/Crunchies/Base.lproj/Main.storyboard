@@ -1,25 +1,129 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LVB-YS-i5n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="LVB-YS-i5n">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Game View Controller-->
         <scene sceneID="CtS-rA-C9T">
             <objects>
-                <viewController id="LVB-YS-i5n" customClass="GameViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LVB-YS-i5n" customClass="GameViewController" customModule="Crunchies" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PCf-gQ-wO7"/>
                         <viewControllerLayoutGuide type="bottom" id="b3d-qh-BLL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bdc-N1-crn" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TV4-eD-rha">
+                                <rect key="frame" x="36" y="94" width="58" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Target:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocN-3S-WBZ">
+                                <rect key="frame" x="36" y="65" width="53" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAB-7U-e6E">
+                                <rect key="frame" x="226" y="94" width="58" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGI-WV-ycL">
+                                <rect key="frame" x="226" y="65" width="45" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NMm-WR-smB">
+                                <rect key="frame" x="0.0" y="209" width="320" height="150"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIY-gr-xGf">
+                                <rect key="frame" x="110" y="462" width="100" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="RAZ-I4-Xmq"/>
+                                    <constraint firstAttribute="width" constant="100" id="vQj-3p-PX8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="20"/>
+                                <state key="normal" title="Shuffle" backgroundImage="Button"/>
+                                <connections>
+                                    <action selector="shuffleButtonPressed:" destination="LVB-YS-i5n" eventType="touchUpInside" id="n9o-cW-jky"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDt-w2-M1k">
+                                <rect key="frame" x="131" y="94" width="58" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Moves:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kF8-dQ-125">
+                                <rect key="frame" x="131" y="65" width="58" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="AU0-Ph-gtN"/>
+                                    <constraint firstAttribute="height" constant="21" id="wZK-YU-vOF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kF8-dQ-125" firstAttribute="firstBaseline" secondItem="PGI-WV-ycL" secondAttribute="firstBaseline" id="3wM-pp-JkF"/>
+                            <constraint firstItem="PGI-WV-ycL" firstAttribute="top" secondItem="PCf-gQ-wO7" secondAttribute="bottom" constant="55" id="AMB-I2-12o"/>
+                            <constraint firstItem="kF8-dQ-125" firstAttribute="baseline" secondItem="PGI-WV-ycL" secondAttribute="baseline" id="BNK-36-gHs"/>
+                            <constraint firstItem="TV4-eD-rha" firstAttribute="top" secondItem="ocN-3S-WBZ" secondAttribute="bottom" constant="8" id="Cd7-70-nSt"/>
+                            <constraint firstItem="qDt-w2-M1k" firstAttribute="top" secondItem="kF8-dQ-125" secondAttribute="bottom" constant="8" symbolic="YES" id="FOa-LA-k2E"/>
+                            <constraint firstItem="kF8-dQ-125" firstAttribute="leading" secondItem="qDt-w2-M1k" secondAttribute="leading" id="GrM-yg-l28"/>
+                            <constraint firstItem="PGI-WV-ycL" firstAttribute="leading" secondItem="kF8-dQ-125" secondAttribute="trailing" constant="37" id="HUU-mG-IM1"/>
+                            <constraint firstItem="cAB-7U-e6E" firstAttribute="top" secondItem="PGI-WV-ycL" secondAttribute="bottom" constant="8" id="HyO-D4-Umh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cAB-7U-e6E" secondAttribute="trailing" constant="20" id="IJe-j2-cgf"/>
+                            <constraint firstItem="TV4-eD-rha" firstAttribute="leading" secondItem="bdc-N1-crn" secondAttribute="leadingMargin" constant="20" id="RCa-B6-V9c"/>
+                            <constraint firstItem="kF8-dQ-125" firstAttribute="centerX" secondItem="qIY-gr-xGf" secondAttribute="centerX" id="VJo-lw-TPs"/>
+                            <constraint firstItem="qDt-w2-M1k" firstAttribute="leading" secondItem="TV4-eD-rha" secondAttribute="trailing" constant="37" id="a1V-YK-0RW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qIY-gr-xGf" secondAttribute="trailing" constant="94" id="bcA-5D-9os"/>
+                            <constraint firstItem="kF8-dQ-125" firstAttribute="centerX" secondItem="NMm-WR-smB" secondAttribute="centerX" id="cLh-IP-oSJ"/>
+                            <constraint firstItem="cAB-7U-e6E" firstAttribute="leading" secondItem="qDt-w2-M1k" secondAttribute="trailing" constant="37" id="ciK-Mz-vqE"/>
+                            <constraint firstItem="kF8-dQ-125" firstAttribute="leading" secondItem="ocN-3S-WBZ" secondAttribute="trailing" constant="42" id="hhO-KC-6vw"/>
+                            <constraint firstItem="kF8-dQ-125" firstAttribute="trailing" secondItem="qDt-w2-M1k" secondAttribute="trailing" id="mSt-hL-9EV"/>
+                            <constraint firstItem="kF8-dQ-125" firstAttribute="baseline" secondItem="ocN-3S-WBZ" secondAttribute="baseline" id="opW-I7-Vbo"/>
+                            <constraint firstItem="qIY-gr-xGf" firstAttribute="leading" secondItem="bdc-N1-crn" secondAttribute="leadingMargin" constant="94" id="wEx-1V-Ncx"/>
+                            <constraint firstItem="b3d-qh-BLL" firstAttribute="top" secondItem="qIY-gr-xGf" secondAttribute="bottom" constant="70" id="wh4-Ga-i2k"/>
+                            <constraint firstItem="ocN-3S-WBZ" firstAttribute="top" secondItem="PCf-gQ-wO7" secondAttribute="bottom" constant="55" id="xJV-4s-2Hv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gameOverPanel" destination="NMm-WR-smB" id="Q5n-YH-E5b"/>
+                        <outlet property="movesLabel" destination="qDt-w2-M1k" id="5O8-Ht-PwH"/>
+                        <outlet property="scoreLabel" destination="cAB-7U-e6E" id="b1Z-WK-GiD"/>
+                        <outlet property="shuffleButton" destination="qIY-gr-xGf" id="Xqa-Uo-cQR"/>
+                        <outlet property="targetLabel" destination="TV4-eD-rha" id="GG4-6c-JNC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="162" y="337"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Button" width="100" height="36"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
