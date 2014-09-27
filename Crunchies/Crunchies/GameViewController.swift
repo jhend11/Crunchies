@@ -14,6 +14,12 @@ import GameKit
 import CoreMotion
 
 
+let SCREEN_HEIGHT = UIScreen.mainScreen().bounds.size.height
+let SCREEN_WIDTH = UIScreen.mainScreen().bounds.size.width
+let IS_IPHONE5 = UIScreen.mainScreen().bounds.size.height == 568
+let IS_IPHONE6 = UIScreen.mainScreen().bounds.size.height == 667
+let IS_IPHONE6PLUS = UIScreen.mainScreen().bounds.size.height == 736
+
 
 extension SKNode {
     class func unarchiveFromFile(file : NSString) -> SKNode? {
@@ -99,24 +105,40 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
             }
         }
         
+        var defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
         
-        
-        var levelimon: NSUserDefaults = NSUserDefaults.standardUserDefaults().objectForKey("level")
-        
-        
+        if let levelIsNotNill = defaults.objectForKey("level") as? Int {
+            self.currentLevel = defaults.objectForKey("level") as Int
+        }
         
         var bannerView = ADBannerView(adType: ADAdType.Banner)
         bannerView.delegate = self
-        bannerView.frame = CGRectMake(0, 0, 320, 50)
-        
+
+        if IS_IPHONE5 {
+            
+            bannerView.frame = CGRectMake(0, 518, 320, 50)
+            
+        } else if IS_IPHONE6 {
+        bannerView.frame = CGRectMake(0, 617, 320, 50)
+
+        } else {
+            bannerView.frame = CGRectMake(0, 696, 320, 50)
+        }
         self.view.addSubview(bannerView)
+
         loadedView()
     
         beginGame()
 
     }
-    
+   
     func loadedView() {
+        
+//        if let data = NSUserDefaults.standardUserDefaults().objectForKey("level") as? NSData {
+//             currentLevel = NSKeyedUnarchiver.unarchiveObjectWithData(data) as Int
+//        }
+      
+        
         let skView = view as SKView
         skView.multipleTouchEnabled = false
         
@@ -187,11 +209,11 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
             
             currentLevel++
             
-            NSUserDefaults.standardUserDefaults().setObject(currentLevel, forKey:"level")
+            NSUserDefaults.standardUserDefaults().setInteger(currentLevel, forKey: "level")
             NSUserDefaults.standardUserDefaults().synchronize()
             
-            var cLevel: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("level")
-            println(cLevel)
+            println("Level_\(String(currentLevel))")
+
             
             showGameOver()
         } else if movesLeft == 0 {
