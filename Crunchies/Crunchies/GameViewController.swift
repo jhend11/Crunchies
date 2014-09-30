@@ -40,10 +40,13 @@ extension SKNode {
 class GameViewController: UIViewController, ADBannerViewDelegate {
     var scene: GameScene!
     var level: Level!
-    var currentLevel = 0
+    var noElfinWay: Int! = 0
     var player: GKLocalPlayer = GKLocalPlayer.localPlayer()
     var allLeaderboards: [String:GKLeaderboard] = Dictionary()
-
+    
+    var resetElfin = UIButton()
+    var resetNormal = UIButton()
+    var currentLevel = 0
     var movesLeft = 0
     var score = 0
     var tapGestureRecognizer: UITapGestureRecognizer!
@@ -55,11 +58,14 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
         return player
         }()
     
+    @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var targetLabel: UILabel!
     @IBOutlet weak var movesLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var gameOverPanel: UIImageView!
     @IBOutlet weak var shuffleButton: UIButton!
+    
+    
     
     
     override func prefersStatusBarHidden() -> Bool {
@@ -74,8 +80,7 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
         return Int(UIInterfaceOrientationMask.AllButUpsideDown.toRaw())
     }
     func handleSwipe(swap: Swap) {
-        // While cookies are being matched and new cookies fall down to fill up
-        // the holes, we don't want the player to tap on anything.
+        
         view.userInteractionEnabled = false
         
         if level.isPossibleSwap(swap) {
@@ -90,6 +95,37 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        if noElfinWay == 1 {
+//            if IS_IPHONE5 {
+//                var image = UIImageView(frame: CGRectMake(20, 15, 30, 30))
+//                image.image = UIImage(named: "elfinIcon")
+//                self.view.addSubview(image)
+//            } else {
+//                var image = UIImageView(frame: CGRectMake(30, 22, 25, 25))
+//                image.image = UIImage(named: "elfinIcon")
+//                self.view.addSubview(image)
+//            }
+//            
+//        }
+        
+        var nc = NSNotificationCenter.defaultCenter()
+        nc.addObserverForName("newGame", object: nil, queue: NSOperationQueue.mainQueue(), usingBlock: { (notification:NSNotification!) -> Void in
+            self.resetGameNormal()
+            println("got the message!")
+        })
+        nc.addObserverForName("newGameElfin", object: nil, queue: NSOperationQueue.mainQueue(), usingBlock: { (notification:NSNotification!) -> Void in
+            self.resetGameElfin()
+            println("got the Elfin message!")
+        })
+        
+        
+        NSUserDefaults.standardUserDefaults().setInteger(noElfinWay, forKey: "difficulty")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+        currentLevel = 4
+        NSUserDefaults.standardUserDefaults().setInteger(currentLevel, forKey: "level")
+        NSUserDefaults.standardUserDefaults().synchronize()
         
         var nC = NSNotificationCenter.defaultCenter()
         nC.addObserver(self, selector: Selector("authChanged"), name: GKPlayerAuthenticationDidChangeNotificationName, object: nil)
@@ -108,36 +144,32 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
         var defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
         
         if let levelIsNotNill = defaults.objectForKey("level") as? Int {
-            self.currentLevel = defaults.objectForKey("level") as Int
+            currentLevel = defaults.objectForKey("level") as Int
         }
+        noElfinWay = defaults.objectForKey("difficulty") as Int
         
         var bannerView = ADBannerView(adType: ADAdType.Banner)
         bannerView.delegate = self
-
+        
         if IS_IPHONE5 {
             
             bannerView.frame = CGRectMake(0, 518, 320, 50)
             
         } else if IS_IPHONE6 {
-        bannerView.frame = CGRectMake(0, 617, 320, 50)
-
+            bannerView.frame = CGRectMake(0, 617, 320, 50)
+            
         } else {
             bannerView.frame = CGRectMake(0, 696, 320, 50)
         }
         self.view.addSubview(bannerView)
-
-        loadedView()
-    
-        beginGame()
-
-    }
-   
-    func loadedView() {
         
-//        if let data = NSUserDefaults.standardUserDefaults().objectForKey("level") as? NSData {
-//             currentLevel = NSKeyedUnarchiver.unarchiveObjectWithData(data) as Int
-//        }
-      
+        loadedView()
+        
+        beginGame()
+        
+    }
+    
+    func loadedView() {
         
         let skView = view as SKView
         skView.multipleTouchEnabled = false
@@ -145,7 +177,6 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
         // Create and configure the scene.
         scene = GameScene(size: skView.bounds.size)
         scene.scaleMode = .AspectFill
-        
         // Load the level.
         level = Level(filename: "Level_\(String(currentLevel))")
         println("Level_\(String(currentLevel))")
@@ -153,6 +184,18 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
         scene.addTiles()
         scene.swipeHandler = handleSwipe
         
+        if noElfinWay == 1 {
+            if IS_IPHONE5 {
+                var image = UIImageView(frame: CGRectMake(20, 15, 30, 30))
+                image.image = UIImage(named: "elfinIcon")
+                self.view.addSubview(image)
+            } else {
+                var image = UIImageView(frame: CGRectMake(30, 22, 25, 25))
+                image.image = UIImage(named: "elfinIcon")
+                self.view.addSubview(image)
+            }
+            
+        }
         // Hide the game over panel from the screen.
         gameOverPanel.hidden = true
         shuffleButton.hidden = true
@@ -190,7 +233,15 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
     }
     func beginGame() {
         loadedView()
-        movesLeft = level.maximumMoves
+        if noElfinWay == 1 {
+            movesLeft = level.maximumMoves - 5
+        } else {
+            movesLeft = level.maximumMoves
+        }
+//        if noElfinWay == 1 {
+//            movesLeft - 5
+//            println("noelfinway is true")
+//        }
         score = 0
         updateLabels()
         level.resetComboMultiplier()
@@ -203,24 +254,35 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
     func decrementMoves() {
         --movesLeft
         updateLabels()
-        if score >= level.targetScore {
+        if currentLevel == 4 && score >= level.targetScore {
+            self.presentViewController(GameResetViewController(), animated: true, completion: nil)
+        } else if score >= level.targetScore  {
             gameOverPanel.image = UIImage(named: "LevelComplete")
-//            submitScore()
-            
             currentLevel++
-            
             NSUserDefaults.standardUserDefaults().setInteger(currentLevel, forKey: "level")
             NSUserDefaults.standardUserDefaults().synchronize()
-            
-            println("Level_\(String(currentLevel))")
-
-            
             showGameOver()
-        } else if movesLeft == 0 {
+        }
+        else if movesLeft == 0 {
             gameOverPanel.image = UIImage(named: "GameOver")
             submitScore()
             showGameOver()
         }
+    }
+    func resetGameNormal() {
+        currentLevel = 0
+        NSUserDefaults.standardUserDefaults().setInteger(currentLevel, forKey: "level")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+        beginGame()
+    }
+    func resetGameElfin() {
+        noElfinWay = 1
+        NSUserDefaults.standardUserDefaults().setInteger(noElfinWay, forKey: "difficulty")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        resetGameNormal()
+        println("noelfinway is true")
+        
     }
     func shuffle() {
         scene.removeAllCookieSprites()
@@ -254,6 +316,8 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
         view.userInteractionEnabled = true
     }
     func updateLabels() {
+        
+        levelLabel.text = NSString(format: "%ld", currentLevel + 1)
         targetLabel.text = NSString(format: "%ld", level.targetScore)
         movesLabel.text = NSString(format: "%ld", movesLeft)
         scoreLabel.text = NSString(format: "%ld", score)
@@ -290,27 +354,26 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
             println("scores uploaded")
         })
         
-//        var scoreReporter1 = GKScore(leaderboardIdentifier: "fastest_reaction_time")
-//        scoreReporter1.value = Int64(reactionTime * 1000)
-//        scoreReporter1.context = 0
-//        GKScore.reportScores([scoreReporter1], withCompletionHandler: { (error) -> Void in
-//            println("reaction time scores uploaded")
-//            
-//        })
-        
-    }
-    
-    func checkAchievement() {
-        
-        if score >= 5 {
-            var score50 = GKAchievement(identifier: "score_50")
-            score50.percentComplete = 100.0
-            score50.showsCompletionBanner = true
-            GKAchievement.reportAchievements([score50], withCompletionHandler: { (error) -> Void in
+        if currentLevel == 5 && score >= level.targetScore  {
+            var gameComplete = GKAchievement(identifier: "game_complete")
+            gameComplete.percentComplete = 100.0
+            gameComplete.showsCompletionBanner = true
+            GKAchievement.reportAchievements([gameComplete], withCompletionHandler: { (error) -> Void in
+                
+                println("achievement sent")
+            })
+        }
+        if currentLevel == 5 && score >= level.targetScore && noElfinWay == true  {
+            var gameComplete = GKAchievement(identifier: "game_complete_elfin")
+            gameComplete.percentComplete = 100.0
+            gameComplete.showsCompletionBanner = true
+            GKAchievement.reportAchievements([gameComplete], withCompletionHandler: { (error) -> Void in
                 
                 println("achievement sent")
             })
         }
     }
-
+    
+    
+    
 }

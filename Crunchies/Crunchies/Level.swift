@@ -17,9 +17,8 @@ class Level {
     private var tiles = Array2D<Tile>(columns: NumColumns, rows: NumRows)
     private var possibleSwaps = Set<Swap>()
     
-    let targetScore: Int!
-    let maximumMoves: Int!
-    
+    var targetScore: Int!
+    var maximumMoves: Int!
     private var comboMultiplier = 0
 
     

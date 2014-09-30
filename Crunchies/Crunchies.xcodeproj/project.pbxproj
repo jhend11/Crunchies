@@ -49,6 +49,9 @@
 		B4B3340019D3786B00FC75E3 /* Tree-Highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4B333F419D3786B00FC75E3 /* Tree-Highlighted@2x.png */; };
 		B4B3340119D3786B00FC75E3 /* Tree@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4B333F519D3786B00FC75E3 /* Tree@2x.png */; };
 		B4B3343919D4BA5500FC75E3 /* happyland_128.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B4B3343819D4BA5500FC75E3 /* happyland_128.mp3 */; };
+		B4B334AE19D73A4A00FC75E3 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B334AD19D73A4A00FC75E3 /* GameKit.framework */; };
+		B4B334B019D8BFA800FC75E3 /* iPhone6.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4B334AF19D8BFA800FC75E3 /* iPhone6.storyboard */; };
+		B4B3350C19DA204200FC75E3 /* GameResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B3350B19DA204200FC75E3 /* GameResetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +111,9 @@
 		B4B333F419D3786B00FC75E3 /* Tree-Highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tree-Highlighted@2x.png"; sourceTree = "<group>"; };
 		B4B333F519D3786B00FC75E3 /* Tree@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tree@2x.png"; sourceTree = "<group>"; };
 		B4B3343819D4BA5500FC75E3 /* happyland_128.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = happyland_128.mp3; sourceTree = "<group>"; };
+		B4B334AD19D73A4A00FC75E3 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		B4B334AF19D8BFA800FC75E3 /* iPhone6.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhone6.storyboard; path = ../iPhone6.storyboard; sourceTree = "<group>"; };
+		B4B3350B19DA204200FC75E3 /* GameResetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameResetViewController.swift; path = ../GameResetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4B333E819D34EBB00FC75E3 /* Crashlytics.framework in Frameworks */,
+				B4B334AE19D73A4A00FC75E3 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +139,7 @@
 		B4B3337519D239A300FC75E3 = {
 			isa = PBXGroup;
 			children = (
+				B4B334AD19D73A4A00FC75E3 /* GameKit.framework */,
 				B4B333E719D34EBB00FC75E3 /* Crashlytics.framework */,
 				B4B3338019D239A300FC75E3 /* Crunchies */,
 				B4B3339A19D239A300FC75E3 /* CrunchiesTests */,
@@ -154,6 +162,7 @@
 				B4B3338319D239A300FC75E3 /* AppDelegate.swift */,
 				B4B3338719D239A300FC75E3 /* GameScene.swift */,
 				B4B3338919D239A300FC75E3 /* GameViewController.swift */,
+				B4B3350B19DA204200FC75E3 /* GameResetViewController.swift */,
 				B4B333B319D23DB400FC75E3 /* Array2D.swift */,
 				B4B333CA19D24A9B00FC75E3 /* Chain.swift */,
 				B4B333B119D23B9A00FC75E3 /* Cookie.swift */,
@@ -162,6 +171,7 @@
 				B4B333C619D242AA00FC75E3 /* Extensions.swift */,
 				B4B333C419D2421D00FC75E3 /* Tile.swift */,
 				B4B333B519D23E2D00FC75E3 /* Set.swift */,
+				B4B334AF19D8BFA800FC75E3 /* iPhone6.storyboard */,
 				B4B3338B19D239A300FC75E3 /* Main.storyboard */,
 				B4B3338E19D239A300FC75E3 /* Images.xcassets */,
 				B4B333E919D3786B00FC75E3 /* WinterSprites.atlas */,
@@ -296,6 +306,12 @@
 				TargetAttributes = {
 					B4B3337D19D239A300FC75E3 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = BN9F9Y233Y;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 					B4B3339619D239A300FC75E3 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -347,6 +363,7 @@
 				B4B3338F19D239A300FC75E3 /* Images.xcassets in Resources */,
 				B4B333FE19D3786B00FC75E3 /* Snowman-Highlighted@2x.png in Resources */,
 				B4B333D519D25E0400FC75E3 /* Chomp.wav in Resources */,
+				B4B334B019D8BFA800FC75E3 /* iPhone6.storyboard in Resources */,
 				B4B333D619D25E0400FC75E3 /* Drip.wav in Resources */,
 				B4B333F919D3786B00FC75E3 /* GingerbreadMan@2x.png in Resources */,
 				B4B3338D19D239A300FC75E3 /* Main.storyboard in Resources */,
@@ -397,6 +414,7 @@
 				B4B333C919D245C600FC75E3 /* Swap.swift in Sources */,
 				B4B333C519D2421D00FC75E3 /* Tile.swift in Sources */,
 				B4B333B619D23E2D00FC75E3 /* Set.swift in Sources */,
+				B4B3350C19DA204200FC75E3 /* GameResetViewController.swift in Sources */,
 				B4B3338A19D239A300FC75E3 /* GameViewController.swift in Sources */,
 				B4B3338419D239A300FC75E3 /* AppDelegate.swift in Sources */,
 				B4B333B419D23DB400FC75E3 /* Array2D.swift in Sources */,
@@ -522,6 +540,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -529,6 +549,7 @@
 				INFOPLIST_FILE = Crunchies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -536,6 +557,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -543,6 +566,7 @@
 				INFOPLIST_FILE = Crunchies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

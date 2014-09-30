@@ -11,4 +11,5 @@
 
   "targetScore" : 100,
   "moves" : 15,
+    "level": 3,
 }

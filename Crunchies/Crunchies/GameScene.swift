@@ -97,7 +97,13 @@ class GameScene: SKScene {
             x: -TileWidth * CGFloat(NumColumns) / 2,
             y: -TileHeight * CGFloat(NumRows) / 2)
         
-        gameLayer.setScale(1.2)
+        if IS_IPHONE5 {
+            gameLayer.setScale(1.0)
+
+        } else {
+            gameLayer.setScale(1.2)
+        }
+        
         tilesLayer.position = layerPosition
         gameLayer.addChild(tilesLayer)
         gameLayer.addChild(cropLayer)
