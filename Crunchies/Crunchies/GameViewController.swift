@@ -40,13 +40,12 @@ extension SKNode {
 class GameViewController: UIViewController, ADBannerViewDelegate {
     var scene: GameScene!
     var level: Level!
-    var noElfinWay: Int! = 0
+    var noElfinWay: Int!
     var player: GKLocalPlayer = GKLocalPlayer.localPlayer()
     var allLeaderboards: [String:GKLeaderboard] = Dictionary()
     
-    var resetElfin = UIButton()
-    var resetNormal = UIButton()
-    var currentLevel = 0
+
+    var currentLevel: Int!
     var movesLeft = 0
     var score = 0
     var tapGestureRecognizer: UITapGestureRecognizer!
@@ -96,18 +95,28 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        if noElfinWay == 1 {
-//            if IS_IPHONE5 {
-//                var image = UIImageView(frame: CGRectMake(20, 15, 30, 30))
-//                image.image = UIImage(named: "elfinIcon")
-//                self.view.addSubview(image)
-//            } else {
-//                var image = UIImageView(frame: CGRectMake(30, 22, 25, 25))
-//                image.image = UIImage(named: "elfinIcon")
-//                self.view.addSubview(image)
-//            }
-//            
-//        }
+       let levelCheck = NSUserDefaults.standardUserDefaults().objectForKey("level") as Int!
+        let diffCheck = NSUserDefaults.standardUserDefaults().objectForKey("difficulty") as Int!
+
+        
+        if levelCheck == nil {
+            currentLevel = 0
+            NSUserDefaults.standardUserDefaults().setInteger(currentLevel, forKey: "level")
+            NSUserDefaults.standardUserDefaults().synchronize()
+            println("new game works")
+        } else {
+            currentLevel = NSUserDefaults.standardUserDefaults().objectForKey("level") as Int
+            println("different level!")
+        }
+        if diffCheck == nil {
+            noElfinWay = 0
+            NSUserDefaults.standardUserDefaults().setInteger(noElfinWay, forKey: "difficulty")
+            NSUserDefaults.standardUserDefaults().synchronize()
+            println("diff check works works")
+
+        }
+        
+        noElfinWay = NSUserDefaults.standardUserDefaults().objectForKey("difficulty") as Int
         
         var nc = NSNotificationCenter.defaultCenter()
         nc.addObserverForName("newGame", object: nil, queue: NSOperationQueue.mainQueue(), usingBlock: { (notification:NSNotification!) -> Void in
@@ -119,13 +128,11 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
             println("got the Elfin message!")
         })
         
+
         
-        NSUserDefaults.standardUserDefaults().setInteger(noElfinWay, forKey: "difficulty")
-        NSUserDefaults.standardUserDefaults().synchronize()
-        
-        currentLevel = 4
-        NSUserDefaults.standardUserDefaults().setInteger(currentLevel, forKey: "level")
-        NSUserDefaults.standardUserDefaults().synchronize()
+//        currentLevel = 4
+//        NSUserDefaults.standardUserDefaults().setInteger(noElfinWay, forKey: "difficulty")
+//        NSUserDefaults.standardUserDefaults().synchronize()
         
         var nC = NSNotificationCenter.defaultCenter()
         nC.addObserver(self, selector: Selector("authChanged"), name: GKPlayerAuthenticationDidChangeNotificationName, object: nil)
@@ -140,13 +147,6 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
                 }
             }
         }
-        
-        var defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        
-        if let levelIsNotNill = defaults.objectForKey("level") as? Int {
-            currentLevel = defaults.objectForKey("level") as Int
-        }
-        noElfinWay = defaults.objectForKey("difficulty") as Int
         
         var bannerView = ADBannerView(adType: ADAdType.Banner)
         bannerView.delegate = self
@@ -163,7 +163,8 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
         }
         self.view.addSubview(bannerView)
         
-        loadedView()
+        println("tee hee 1")
+//        loadedView()
         
         beginGame()
         
@@ -171,41 +172,10 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
     
     func loadedView() {
         
-        let skView = view as SKView
-        skView.multipleTouchEnabled = false
+   
         
-        // Create and configure the scene.
-        scene = GameScene(size: skView.bounds.size)
-        scene.scaleMode = .AspectFill
-        // Load the level.
-        level = Level(filename: "Level_\(String(currentLevel))")
-        println("Level_\(String(currentLevel))")
-        scene.level = level
-        scene.addTiles()
-        scene.swipeHandler = handleSwipe
-        
-        if noElfinWay == 1 {
-            if IS_IPHONE5 {
-                var image = UIImageView(frame: CGRectMake(20, 15, 30, 30))
-                image.image = UIImage(named: "elfinIcon")
-                self.view.addSubview(image)
-            } else {
-                var image = UIImageView(frame: CGRectMake(30, 22, 25, 25))
-                image.image = UIImage(named: "elfinIcon")
-                self.view.addSubview(image)
-            }
-            
-        }
-        // Hide the game over panel from the screen.
-        gameOverPanel.hidden = true
-        shuffleButton.hidden = true
-        
-        // Present the scene.
-        skView.presentScene(scene)
-        
-        // Load and start background music.
-        backgroundMusic.play()
-        
+        println("tee hee loadedview")
+
         // Let's start the game!
     }
     func showGameOver() {
@@ -232,16 +202,53 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
         
     }
     func beginGame() {
-        loadedView()
+        
+        println("tee hee 2")
+        
+        let skView = view as SKView
+        skView.multipleTouchEnabled = false
+        
+        // Create and configure the scene.
+        scene = GameScene(size: skView.bounds.size)
+        scene.scaleMode = .AspectFill
+        // Load the level.
+        level = Level(filename: "Level_\(String(currentLevel))")
+        println("Level_\(String(currentLevel))")
+        scene.level = level
+        scene.addTiles()
+        scene.swipeHandler = handleSwipe
+        
+        
+        // Hide the game over panel from the screen.
+        gameOverPanel.hidden = true
+        shuffleButton.hidden = true
+        
+        // Present the scene.
+        skView.presentScene(scene)
+        
+        // Load and start background music.
+        backgroundMusic.play()
+        
+        if noElfinWay == 1 {
+            if IS_IPHONE5 {
+                var image = UIImageView(frame: CGRectMake(20, 15, 30, 30))
+                image.image = UIImage(named: "elfinIcon")
+                self.view.addSubview(image)
+            } else {
+                var image = UIImageView(frame: CGRectMake(30, 22, 25, 25))
+                image.image = UIImage(named: "elfinIcon")
+                self.view.addSubview(image)
+            }
+            
+        }
+        
+        
+//        loadedView()
         if noElfinWay == 1 {
             movesLeft = level.maximumMoves - 5
         } else {
             movesLeft = level.maximumMoves
         }
-//        if noElfinWay == 1 {
-//            movesLeft - 5
-//            println("noelfinway is true")
-//        }
         score = 0
         updateLabels()
         level.resetComboMultiplier()
@@ -258,8 +265,9 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
             self.presentViewController(GameResetViewController(), animated: true, completion: nil)
         } else if score >= level.targetScore  {
             gameOverPanel.image = UIImage(named: "LevelComplete")
-            currentLevel++
+            currentLevel!++
             NSUserDefaults.standardUserDefaults().setInteger(currentLevel, forKey: "level")
+            NSUserDefaults.standardUserDefaults().setInteger(noElfinWay, forKey: "difficulty")
             NSUserDefaults.standardUserDefaults().synchronize()
             showGameOver()
         }
