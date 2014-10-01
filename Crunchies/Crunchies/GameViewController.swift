@@ -44,7 +44,7 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
     var player: GKLocalPlayer = GKLocalPlayer.localPlayer()
     var allLeaderboards: [String:GKLeaderboard] = Dictionary()
     
-
+    var elfIcon = UIImageView()
     var currentLevel: Int!
     var movesLeft = 0
     var score = 0
@@ -103,16 +103,13 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
             currentLevel = 0
             NSUserDefaults.standardUserDefaults().setInteger(currentLevel, forKey: "level")
             NSUserDefaults.standardUserDefaults().synchronize()
-            println("new game works")
         } else {
             currentLevel = NSUserDefaults.standardUserDefaults().objectForKey("level") as Int
-            println("different level!")
         }
         if diffCheck == nil {
             noElfinWay = 0
             NSUserDefaults.standardUserDefaults().setInteger(noElfinWay, forKey: "difficulty")
             NSUserDefaults.standardUserDefaults().synchronize()
-            println("diff check works works")
 
         }
         
@@ -121,16 +118,14 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
         var nc = NSNotificationCenter.defaultCenter()
         nc.addObserverForName("newGame", object: nil, queue: NSOperationQueue.mainQueue(), usingBlock: { (notification:NSNotification!) -> Void in
             self.resetGameNormal()
-            println("got the message!")
         })
         nc.addObserverForName("newGameElfin", object: nil, queue: NSOperationQueue.mainQueue(), usingBlock: { (notification:NSNotification!) -> Void in
             self.resetGameElfin()
-            println("got the Elfin message!")
         })
         
 
         
-//        currentLevel = 4
+        currentLevel = 4
 //        NSUserDefaults.standardUserDefaults().setInteger(noElfinWay, forKey: "difficulty")
 //        NSUserDefaults.standardUserDefaults().synchronize()
         
@@ -161,23 +156,12 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
         } else {
             bannerView.frame = CGRectMake(0, 696, 320, 50)
         }
-        self.view.addSubview(bannerView)
-        
-        println("tee hee 1")
-//        loadedView()
+//        self.view.addSubview(bannerView)
         
         beginGame()
         
     }
-    
-    func loadedView() {
-        
-   
-        
-        println("tee hee loadedview")
 
-        // Let's start the game!
-    }
     func showGameOver() {
         
         gameOverPanel.hidden = false
@@ -203,8 +187,6 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
     }
     func beginGame() {
         
-        println("tee hee 2")
-        
         let skView = view as SKView
         skView.multipleTouchEnabled = false
         
@@ -213,7 +195,7 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
         scene.scaleMode = .AspectFill
         // Load the level.
         level = Level(filename: "Level_\(String(currentLevel))")
-        println("Level_\(String(currentLevel))")
+//        println("Level_\(String(currentLevel))")
         scene.level = level
         scene.addTiles()
         scene.swipeHandler = handleSwipe
@@ -231,19 +213,22 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
         
         if noElfinWay == 1 {
             if IS_IPHONE5 {
-                var image = UIImageView(frame: CGRectMake(20, 15, 30, 30))
-                image.image = UIImage(named: "elfinIcon")
-                self.view.addSubview(image)
+                elfIcon.frame = CGRectMake(20, 15, 30, 30)
+                elfIcon.image = UIImage(named: "elfinIcon")
+                self.view.addSubview(elfIcon)
+            } else  if IS_IPHONE6 {
+                elfIcon.frame = CGRectMake(20, 15, 30, 30)
+                elfIcon.image = UIImage(named: "elfinIcon")
+                self.view.addSubview(elfIcon)
             } else {
-                var image = UIImageView(frame: CGRectMake(30, 22, 25, 25))
-                image.image = UIImage(named: "elfinIcon")
-                self.view.addSubview(image)
+                elfIcon.frame = CGRectMake(30, 27, 30, 30)
+                elfIcon.image = UIImage(named: "elfinIcon")
+                self.view.addSubview(elfIcon)
             }
             
         }
         
         
-//        loadedView()
         if noElfinWay == 1 {
             movesLeft = level.maximumMoves - 5
         } else {
@@ -263,6 +248,7 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
         updateLabels()
         if currentLevel == 4 && score >= level.targetScore {
             self.presentViewController(GameResetViewController(), animated: true, completion: nil)
+            submitScore()
         } else if score >= level.targetScore  {
             gameOverPanel.image = UIImage(named: "LevelComplete")
             currentLevel!++
@@ -279,16 +265,25 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
     }
     func resetGameNormal() {
         currentLevel = 0
+        if noElfinWay == 1 {
+            noElfinWay = 0
+            NSUserDefaults.standardUserDefaults().setInteger(noElfinWay, forKey: "difficulty")
+            elfIcon.removeFromSuperview()
+        }
         NSUserDefaults.standardUserDefaults().setInteger(currentLevel, forKey: "level")
         NSUserDefaults.standardUserDefaults().synchronize()
         
         beginGame()
     }
     func resetGameElfin() {
+        currentLevel = 0
+
         noElfinWay = 1
+        NSUserDefaults.standardUserDefaults().setInteger(currentLevel, forKey: "level")
         NSUserDefaults.standardUserDefaults().setInteger(noElfinWay, forKey: "difficulty")
         NSUserDefaults.standardUserDefaults().synchronize()
-        resetGameNormal()
+//        resetGameNormal()
+        beginGame()
         println("noelfinway is true")
         
     }
@@ -362,7 +357,7 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
             println("scores uploaded")
         })
         
-        if currentLevel == 5 && score >= level.targetScore  {
+        if currentLevel == 4 && score >= level.targetScore  {
             var gameComplete = GKAchievement(identifier: "game_complete")
             gameComplete.percentComplete = 100.0
             gameComplete.showsCompletionBanner = true
@@ -371,13 +366,13 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
                 println("achievement sent")
             })
         }
-        if currentLevel == 5 && score >= level.targetScore && noElfinWay == true  {
+        if currentLevel == 4 && score >= level.targetScore && noElfinWay == true  {
             var gameComplete = GKAchievement(identifier: "game_complete_elfin")
             gameComplete.percentComplete = 100.0
             gameComplete.showsCompletionBanner = true
             GKAchievement.reportAchievements([gameComplete], withCompletionHandler: { (error) -> Void in
                 
-                println("achievement sent")
+                println("elfin achievement sent")
             })
         }
     }

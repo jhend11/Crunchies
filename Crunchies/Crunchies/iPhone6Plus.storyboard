@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3Eg-MX-B8G">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="FVJ-WY-qYp">
+            <objects>
+                <viewController storyboardIdentifier="iPhone6Plus" id="3Eg-MX-B8G" customClass="GameViewController" customModule="Crunchies" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bdv-kh-2xV"/>
+                        <viewControllerLayoutGuide type="bottom" id="L15-hq-aM3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sty-9g-umT" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVw-zY-6ma">
+                                <rect key="frame" x="212" y="90" width="50" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="228" y="110" width="50" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDc-RT-XyJ">
+                                <rect key="frame" x="116" y="90" width="58" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="122" y="110" width="58" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACj-in-WXD">
+                                <rect key="frame" x="306" y="90" width="50" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="332" y="110" width="50" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QiQ-vJ-fdJ">
+                                <rect key="frame" x="85" y="460" width="150" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="7CF-k0-X4z"/>
+                                    <constraint firstAttribute="width" constant="230" id="JR2-8n-4Ch"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="20"/>
+                                <state key="normal" title="Shuffle" backgroundImage="Button"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7CF-k0-X4z"/>
+                                        <exclude reference="JR2-8n-4Ch"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="7CF-k0-X4z"/>
+                                        <include reference="JR2-8n-4Ch"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="shuffleButtonPressed:" destination="3Eg-MX-B8G" eventType="touchUpInside" id="p9c-Ch-DYk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoE-YU-nhc">
+                                <rect key="frame" x="17.5" y="66" width="70" height="20"/>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.69019607839999997" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="Goal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="18" y="86" width="70" height="20"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KaJ-IF-kj5">
+                                <rect key="frame" x="110" y="66" width="70" height="20"/>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.69019607839999997" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="Swaps">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="122" y="86" width="70" height="20"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqo-WQ-5ht">
+                                <rect key="frame" x="202" y="66" width="70" height="20"/>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.69019607839999997" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="Score">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="228" y="86" width="70" height="20"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gB-Z5-6p1">
+                                <rect key="frame" x="294" y="66" width="70" height="20"/>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.69019607839999997" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="Level">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="332" y="86" width="70" height="20"/>
+                                </variation>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J15-te-IZu">
+                                <rect key="frame" x="20" y="90" width="66" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="110" width="66" height="21"/>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d1z-lr-wdN">
+                                <rect key="frame" x="10" y="209" width="300" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Wut-Q7-BOj"/>
+                                    <constraint firstAttribute="width" constant="300" id="d7v-lx-2wC"/>
+                                    <constraint firstAttribute="height" constant="150" id="rrM-cr-a1u"/>
+                                    <constraint firstAttribute="height" constant="150" id="uTb-pb-Zth"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Wut-Q7-BOj"/>
+                                        <exclude reference="rrM-cr-a1u"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Wut-Q7-BOj"/>
+                                        <exclude reference="d7v-lx-2wC"/>
+                                        <include reference="rrM-cr-a1u"/>
+                                        <exclude reference="uTb-pb-Zth"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QiQ-vJ-fdJ" firstAttribute="leading" secondItem="Sty-9g-umT" secondAttribute="leadingMargin" constant="69" id="0V9-jM-05c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QiQ-vJ-fdJ" secondAttribute="trailing" constant="69" id="68h-Sn-69W"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="d1z-lr-wdN" secondAttribute="trailing" constant="34" id="E94-jX-mi1"/>
+                            <constraint firstItem="d1z-lr-wdN" firstAttribute="leading" secondItem="Sty-9g-umT" secondAttribute="leadingMargin" constant="-6" id="NhT-4a-ker"/>
+                            <constraint firstItem="d1z-lr-wdN" firstAttribute="leading" secondItem="Sty-9g-umT" secondAttribute="leadingMargin" constant="34" id="PZO-Yv-ShR"/>
+                            <constraint firstItem="d1z-lr-wdN" firstAttribute="top" secondItem="Sty-9g-umT" secondAttribute="topMargin" constant="218" id="U1P-dM-BhD"/>
+                            <constraint firstItem="L15-hq-aM3" firstAttribute="top" secondItem="QiQ-vJ-fdJ" secondAttribute="bottom" constant="72" id="Zy9-ah-p0s"/>
+                            <constraint firstItem="d1z-lr-wdN" firstAttribute="top" secondItem="Sty-9g-umT" secondAttribute="topMargin" constant="209" id="lv0-kK-efS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="d1z-lr-wdN" secondAttribute="trailing" constant="-6" id="muq-67-PMj"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="E94-jX-mi1"/>
+                                <exclude reference="PZO-Yv-ShR"/>
+                                <exclude reference="U1P-dM-BhD"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="E94-jX-mi1"/>
+                                <exclude reference="NhT-4a-ker"/>
+                                <include reference="PZO-Yv-ShR"/>
+                                <include reference="U1P-dM-BhD"/>
+                                <exclude reference="lv0-kK-efS"/>
+                                <exclude reference="muq-67-PMj"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="aTy-WU-gMk"/>
+                    <connections>
+                        <outlet property="gameOverPanel" destination="d1z-lr-wdN" id="UYC-a2-Ytx"/>
+                        <outlet property="levelLabel" destination="ACj-in-WXD" id="ieh-da-H1q"/>
+                        <outlet property="movesLabel" destination="RDc-RT-XyJ" id="Qer-yN-lf9"/>
+                        <outlet property="scoreLabel" destination="uVw-zY-6ma" id="yNX-N2-3qt"/>
+                        <outlet property="shuffleButton" destination="QiQ-vJ-fdJ" id="ygU-AO-9rl"/>
+                        <outlet property="targetLabel" destination="J15-te-IZu" id="rs1-aV-37h"/>
+                        <segue destination="gSF-Mb-TO3" kind="modal" identifier="resetGameElfin" id="nOW-eg-ZTf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mNv-g8-Lst" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-330" y="320"/>
+        </scene>
+        <!--Game Reset View Controller-->
+        <scene sceneID="p6b-y8-6li">
+            <objects>
+                <viewController id="gSF-Mb-TO3" customClass="GameResetViewController" customModule="Crunchies" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DQv-nm-VGo"/>
+                        <viewControllerLayoutGuide type="bottom" id="nhe-FZ-3yt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bSq-dA-ld4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="3Eg-MX-B8G" kind="modal" identifier="back" id="rsH-o3-bpW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b30-L5-FHL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="579" y="281"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Button" width="100" height="36"/>
+    </resources>
+</document>

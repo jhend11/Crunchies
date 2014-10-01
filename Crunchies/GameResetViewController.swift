@@ -21,7 +21,7 @@ class GameResetViewController: UIViewController{
             var backgroundView = UIImageView(frame: self.view.frame)
             backgroundView.image = UIImage(named: "Backgroundthing2")
             view.addSubview(backgroundView)
-        }
+        } 
         var backgroundView = UIImageView(frame: self.view.frame)
         backgroundView.image = UIImage(named: "Backgroundthing2")
         view.addSubview(backgroundView)
