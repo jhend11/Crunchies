@@ -13,7 +13,6 @@ import Crashlytics
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var GVC: GameViewController!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -23,25 +22,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             var storyboard = UIStoryboard(name: "Main", bundle: nil)
             var rootVC = storyboard.instantiateInitialViewController() as GameViewController
             window!.rootViewController = rootVC
+            println("iphone5")
         } else if  IS_IPHONE6 {
             var storyboard = UIStoryboard(name: "iPhone6", bundle: nil)
             var rootVC = storyboard.instantiateInitialViewController() as GameViewController
             window!.rootViewController = rootVC
+            println("iphone6")
         } else if IS_IPHONE6PLUS {
             var storyboard = UIStoryboard(name: "iPhone6Plus", bundle: nil)
             var rootVC = storyboard.instantiateInitialViewController() as GameViewController
             window!.rootViewController = rootVC
-            println("iPhone6Plus")
+            println("iphone6+")
         } else if IS_IPAD {
             var storyboard = UIStoryboard(name: "iPad", bundle: nil)
             var rootVC = storyboard.instantiateInitialViewController() as GameViewController
             window!.rootViewController = rootVC
-            println("iPad")
+            println("ipad")
         } else {
             var storyboard = UIStoryboard(name: "iPhone4s", bundle: nil)
             var rootVC = storyboard.instantiateInitialViewController() as GameViewController
             window!.rootViewController = rootVC
-            println("3.5 in screen")
+            println("iphone4s")
         }
         window!.makeKeyAndVisible()
 

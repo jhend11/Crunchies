@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="kCc-zD-Sc5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6sU-wm-bPw" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEb-vx-rTk">
@@ -128,13 +128,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="udT-vK-d2n">
                                 <rect key="frame" x="5" y="209" width="310" height="150"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7M-4g-4u7">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7M-4g-4u7">
                                 <rect key="frame" x="85" y="466" width="151" height="36"/>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="20"/>
                                 <state key="normal" title="Shuffle" backgroundImage="Button"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="125" y="512" width="150" height="36"/>
-                                </variation>
                                 <connections>
                                     <action selector="shuffleButtonPressed:" destination="CWf-zf-Ag9" eventType="touchUpInside" id="FOl-53-YAQ"/>
                                 </connections>
@@ -169,7 +166,7 @@
                         <outlet property="scoreLabel" destination="yIb-PR-4NE" id="BBi-Fx-Id2"/>
                         <outlet property="shuffleButton" destination="G7M-4g-4u7" id="4fH-9g-TTI"/>
                         <outlet property="targetLabel" destination="GEb-vx-rTk" id="PvA-RW-Jsg"/>
-                        <segue destination="39H-wH-2r6" kind="modal" identifier="resetGameElfin" id="XBG-zO-Bly"/>
+                        <segue destination="39H-wH-2r6" kind="presentation" identifier="resetGameElfin" id="XBG-zO-Bly"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pJa-Be-bRH" sceneMemberID="firstResponder"/>
@@ -185,7 +182,7 @@
                         <viewControllerLayoutGuide type="bottom" id="7zA-8Z-wWr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kJb-qY-TxO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

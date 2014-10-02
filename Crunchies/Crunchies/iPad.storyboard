@@ -17,6 +17,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qf0-cF-MTb">
+                                <rect key="frame" x="212" y="90" width="50" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="412" y="119" width="50" height="21"/>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="228" y="110" width="58" height="21"/>
+                                </variation>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iLe-TS-TeJ">
                                 <rect key="frame" x="10" y="209" width="300" height="150"/>
                                 <constraints>
@@ -52,43 +65,6 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gc-bS-Uy7">
-                                <rect key="frame" x="85" y="460" width="430" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="plD-Hd-ZAx"/>
-                                    <constraint firstAttribute="width" constant="236" id="yJ9-hc-rjJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="29"/>
-                                <state key="normal" title="Shuffle" backgroundImage="Button"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="plD-Hd-ZAx"/>
-                                        <exclude reference="yJ9-hc-rjJ"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="plD-Hd-ZAx"/>
-                                        <include reference="yJ9-hc-rjJ"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="shuffleButtonPressed:" destination="JvW-cQ-yQ2" eventType="touchUpInside" id="ZSo-py-TdV"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qf0-cF-MTb">
-                                <rect key="frame" x="212" y="90" width="50" height="21"/>
-                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="24"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="412" y="119" width="50" height="21"/>
-                                </variation>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="228" y="110" width="58" height="21"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHe-id-6NJ">
                                 <rect key="frame" x="116" y="90" width="58" height="21"/>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="24"/>
@@ -208,6 +184,40 @@
                                     <rect key="frame" x="16" y="110" width="58" height="21"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gc-bS-Uy7">
+                                <rect key="frame" x="85" y="460" width="430" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="FNm-Di-xTg"/>
+                                    <constraint firstAttribute="width" constant="240" id="a6l-xP-Pwh"/>
+                                    <constraint firstAttribute="height" constant="60" id="plD-Hd-ZAx"/>
+                                    <constraint firstAttribute="width" constant="236" id="yJ9-hc-rjJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="29"/>
+                                <state key="normal" title="Shuffle" backgroundImage="Button"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="FNm-Di-xTg"/>
+                                        <exclude reference="a6l-xP-Pwh"/>
+                                        <exclude reference="plD-Hd-ZAx"/>
+                                        <exclude reference="yJ9-hc-rjJ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="FNm-Di-xTg"/>
+                                        <include reference="a6l-xP-Pwh"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="plD-Hd-ZAx"/>
+                                        <include reference="yJ9-hc-rjJ"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="shuffleButtonPressed:" destination="JvW-cQ-yQ2" eventType="touchUpInside" id="ZSo-py-TdV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -217,6 +227,7 @@
                             <constraint firstItem="iLe-TS-TeJ" firstAttribute="top" secondItem="4yq-I1-7OL" secondAttribute="topMargin" constant="217" id="EpM-RE-Qzx"/>
                             <constraint firstItem="1gc-bS-Uy7" firstAttribute="leading" secondItem="4yq-I1-7OL" secondAttribute="leadingMargin" constant="66" id="KZ7-g8-3vC"/>
                             <constraint firstItem="eIp-w5-nsN" firstAttribute="top" secondItem="1gc-bS-Uy7" secondAttribute="bottom" constant="57" id="LgB-2a-9F7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1gc-bS-Uy7" secondAttribute="trailing" constant="164" id="NrM-TC-HRc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iLe-TS-TeJ" secondAttribute="trailing" constant="134" id="VaN-Uh-kOr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1gc-bS-Uy7" secondAttribute="trailing" constant="69" id="XF9-do-1tU"/>
                             <constraint firstItem="eIp-w5-nsN" firstAttribute="top" secondItem="1gc-bS-Uy7" secondAttribute="bottom" constant="72" id="Zg7-e6-Fqn"/>
@@ -224,8 +235,10 @@
                             <constraint firstItem="iLe-TS-TeJ" firstAttribute="leading" secondItem="4yq-I1-7OL" secondAttribute="leadingMargin" constant="34" id="lVM-Wu-NwC"/>
                             <constraint firstItem="iLe-TS-TeJ" firstAttribute="leading" secondItem="4yq-I1-7OL" secondAttribute="leadingMargin" constant="134" id="lbF-LZ-6P9"/>
                             <constraint firstItem="iLe-TS-TeJ" firstAttribute="top" secondItem="4yq-I1-7OL" secondAttribute="topMargin" constant="218" id="p0Y-sC-WBp"/>
+                            <constraint firstItem="eIp-w5-nsN" firstAttribute="top" secondItem="1gc-bS-Uy7" secondAttribute="bottom" constant="72" id="seu-5q-LE5"/>
                             <constraint firstItem="1gc-bS-Uy7" firstAttribute="leading" secondItem="4yq-I1-7OL" secondAttribute="leadingMargin" constant="69" id="tf3-2V-RFC"/>
                             <constraint firstItem="iLe-TS-TeJ" firstAttribute="top" secondItem="4yq-I1-7OL" secondAttribute="topMargin" constant="209" id="vhQ-nK-Rd9"/>
+                            <constraint firstItem="1gc-bS-Uy7" firstAttribute="leading" secondItem="4yq-I1-7OL" secondAttribute="leadingMargin" constant="164" id="yEO-Ub-384"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -237,7 +250,10 @@
                                 <exclude reference="p0Y-sC-WBp"/>
                                 <exclude reference="DZC-bb-LpD"/>
                                 <exclude reference="KZ7-g8-3vC"/>
+                                <exclude reference="NrM-TC-HRc"/>
+                                <exclude reference="yEO-Ub-384"/>
                                 <exclude reference="LgB-2a-9F7"/>
+                                <exclude reference="seu-5q-LE5"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -248,6 +264,12 @@
                                 <exclude reference="jPz-vL-JmQ"/>
                                 <include reference="lbF-LZ-6P9"/>
                                 <exclude reference="vhQ-nK-Rd9"/>
+                                <include reference="NrM-TC-HRc"/>
+                                <exclude reference="XF9-do-1tU"/>
+                                <exclude reference="tf3-2V-RFC"/>
+                                <include reference="yEO-Ub-384"/>
+                                <exclude reference="Zg7-e6-Fqn"/>
+                                <include reference="seu-5q-LE5"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">

@@ -8,7 +8,7 @@
         <!--Game View Controller-->
         <scene sceneID="cPK-PB-3fE">
             <objects>
-                <viewController id="iDw-7l-foL" customClass="GameViewController" customModule="Crunchies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="iPhone6" id="iDw-7l-foL" customClass="GameViewController" customModule="Crunchies" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f6x-h5-jld"/>
                         <viewControllerLayoutGuide type="bottom" id="5U3-Yk-DfN"/>

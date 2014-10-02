@@ -28,9 +28,9 @@ class GameScene: SKScene {
     var swipeFromRow: Int?
     var swipeHandler: ((Swap) -> ())?
     
-    let swapSound = SKAction.playSoundFileNamed("Chomp.wav", waitForCompletion: false)
+    let swapSound = SKAction.playSoundFileNamed("coinbag.wav", waitForCompletion: false)
     let invalidSwapSound = SKAction.playSoundFileNamed("Error.wav", waitForCompletion: false)
-    let matchSound = SKAction.playSoundFileNamed("Ka-Ching.wav", waitForCompletion: false)
+    let matchSound = SKAction.playSoundFileNamed("highbell.mp3", waitForCompletion: false)
     let fallingCookieSound = SKAction.playSoundFileNamed("Scrape.wav", waitForCompletion: false)
     let addCookieSound = SKAction.playSoundFileNamed("Drip.wav", waitForCompletion: false)
     

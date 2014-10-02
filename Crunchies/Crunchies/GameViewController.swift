@@ -125,9 +125,8 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
             self.resetGameElfin()
         })
         
-
-        
-//        currentLevel = 9
+//        noElfinWay = 0
+//        currentLevel = 0
 //        NSUserDefaults.standardUserDefaults().setInteger(noElfinWay, forKey: "difficulty")
 //        NSUserDefaults.standardUserDefaults().synchronize()
         
@@ -157,16 +156,22 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
             
         } else if IS_IPHONE6PLUS {
             bannerView.frame = CGRectMake(0, 696, 320, 50)
+        } else if IS_IPAD {
+            bannerView.frame = CGRectMake(0, 968, 320, 50)
         } else {
             bannerView.frame = CGRectMake(0, 430, 320, 50)
 
         }
-//        self.view.addSubview(bannerView)
+        self.view.addSubview(bannerView)
         
         beginGame()
         
     }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        backgroundMusic.play()
 
+    }
     func showGameOver() {
         
         gameOverPanel.hidden = false
@@ -214,8 +219,8 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
         skView.presentScene(scene)
         
         // Load and start background music.
-        backgroundMusic.play()
         
+
         if noElfinWay == 1 {
             if IS_IPHONE5 {
                 elfIcon.frame = CGRectMake(20, 15, 30, 30)

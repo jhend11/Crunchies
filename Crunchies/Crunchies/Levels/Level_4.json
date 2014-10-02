@@ -9,9 +9,9 @@
               [0, 0, 0, 0, 0, 0, 0, 0, 0 ],
               [0, 0, 0, 0, 0, 0, 0, 0, 0 ] ],
 
-  "targetScore" : 1000,
+  "targetScore" : 900,
   "moves" : 10,
     "level": 5,
-    "elfin": 6,
+    "elfin": 7,
 
 }
