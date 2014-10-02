@@ -125,7 +125,7 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
         
 
         
-        currentLevel = 4
+//        currentLevel = 9
 //        NSUserDefaults.standardUserDefaults().setInteger(noElfinWay, forKey: "difficulty")
 //        NSUserDefaults.standardUserDefaults().synchronize()
         
@@ -217,7 +217,7 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
                 elfIcon.image = UIImage(named: "elfinIcon")
                 self.view.addSubview(elfIcon)
             } else  if IS_IPHONE6 {
-                elfIcon.frame = CGRectMake(20, 15, 30, 30)
+                elfIcon.frame = CGRectMake(23, 22, 30, 30)
                 elfIcon.image = UIImage(named: "elfinIcon")
                 self.view.addSubview(elfIcon)
             } else {
@@ -230,7 +230,7 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
         
         
         if noElfinWay == 1 {
-            movesLeft = level.maximumMoves - 5
+            movesLeft = level.maxMovesElfin
         } else {
             movesLeft = level.maximumMoves
         }
@@ -246,7 +246,7 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
     func decrementMoves() {
         --movesLeft
         updateLabels()
-        if currentLevel == 4 && score >= level.targetScore {
+        if currentLevel == 9 && score >= level.targetScore {
             self.presentViewController(GameResetViewController(), animated: true, completion: nil)
             submitScore()
         } else if score >= level.targetScore  {
@@ -357,7 +357,7 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
             println("scores uploaded")
         })
         
-        if currentLevel == 4 && score >= level.targetScore  {
+        if currentLevel == 9 && score >= level.targetScore  {
             var gameComplete = GKAchievement(identifier: "game_complete")
             gameComplete.percentComplete = 100.0
             gameComplete.showsCompletionBanner = true
@@ -366,7 +366,7 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
                 println("achievement sent")
             })
         }
-        if currentLevel == 4 && score >= level.targetScore && noElfinWay == true  {
+        if currentLevel == 9 && score >= level.targetScore && noElfinWay == true  {
             var gameComplete = GKAchievement(identifier: "game_complete_elfin")
             gameComplete.percentComplete = 100.0
             gameComplete.showsCompletionBanner = true

@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fD8-Y0-ZuR">
-                                <rect key="frame" x="212" y="90" width="50" height="21"/>
+                                <rect key="frame" x="212" y="90" width="58" height="21"/>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -39,20 +39,12 @@
                                 <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZS-Hi-wwA">
-                                <rect key="frame" x="306" y="90" width="50" height="21"/>
+                                <rect key="frame" x="306" y="90" width="58" height="21"/>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pr9-gH-yPn">
-                                <rect key="frame" x="85" y="460" width="150" height="36"/>
-                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="20"/>
-                                <state key="normal" title="Shuffle" backgroundImage="Button"/>
-                                <connections>
-                                    <action selector="shuffleButtonPressed:" destination="iDw-7l-foL" eventType="touchUpInside" id="OXE-cT-g3u"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32t-2h-XU2">
                                 <rect key="frame" x="17.5" y="66" width="70" height="20"/>
                                 <color key="backgroundColor" red="0.12941176470588237" green="0.69019607843137254" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
@@ -110,21 +102,33 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKJ-r0-SFN">
-                                <rect key="frame" x="20" y="90" width="66" height="21"/>
+                                <rect key="frame" x="20" y="90" width="58" height="21"/>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pr9-gH-yPn">
+                                <rect key="frame" x="60" y="454" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="4rp-2r-mIz"/>
+                                    <constraint firstAttribute="height" constant="50" id="kEg-PP-u3O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="25"/>
+                                <state key="normal" title="Shuffle" backgroundImage="Button"/>
+                                <connections>
+                                    <action selector="shuffleButtonPressed:" destination="iDw-7l-foL" eventType="touchUpInside" id="OXE-cT-g3u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Pr9-gH-yPn" secondAttribute="trailing" constant="69" id="Af9-VT-qT5"/>
+                            <constraint firstItem="5U3-Yk-DfN" firstAttribute="top" secondItem="Pr9-gH-yPn" secondAttribute="bottom" constant="64" id="Qsa-Zz-Xbx"/>
                             <constraint firstItem="bfb-wt-5z3" firstAttribute="leading" secondItem="ghv-RS-Oq2" secondAttribute="leadingMargin" constant="-6" id="W0y-3W-trc"/>
-                            <constraint firstItem="Pr9-gH-yPn" firstAttribute="leading" secondItem="ghv-RS-Oq2" secondAttribute="leadingMargin" constant="69" id="eM5-Ul-fHf"/>
-                            <constraint firstItem="5U3-Yk-DfN" firstAttribute="top" secondItem="Pr9-gH-yPn" secondAttribute="bottom" constant="72" id="uAu-Xd-Ouw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Pr9-gH-yPn" secondAttribute="trailing" constant="44" id="g5i-gV-sTP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bfb-wt-5z3" secondAttribute="trailing" constant="-6" id="wie-zy-EfY"/>
                             <constraint firstItem="bfb-wt-5z3" firstAttribute="top" secondItem="ghv-RS-Oq2" secondAttribute="topMargin" constant="209" id="yJK-Mz-fwa"/>
+                            <constraint firstItem="Pr9-gH-yPn" firstAttribute="leading" secondItem="ghv-RS-Oq2" secondAttribute="leadingMargin" constant="44" id="zS9-fD-Qhw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LId-NM-kvD"/>
@@ -155,9 +159,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <segue destination="iDw-7l-foL" kind="modal" identifier="back" id="Wfc-FK-lRk"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cg-48-bVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

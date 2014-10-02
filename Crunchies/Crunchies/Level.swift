@@ -19,6 +19,7 @@ class Level {
     
     var targetScore: Int!
     var maximumMoves: Int!
+    var maxMovesElfin: Int!
     private var comboMultiplier = 0
 
     
@@ -40,6 +41,7 @@ class Level {
                 }
                 targetScore = (dictionary["targetScore"] as NSNumber).integerValue
                 maximumMoves = (dictionary["moves"] as NSNumber).integerValue
+                maxMovesElfin = (dictionary["elfin"] as NSNumber).integerValue
             }
             
         }
