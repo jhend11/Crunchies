@@ -27,11 +27,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             var storyboard = UIStoryboard(name: "iPhone6", bundle: nil)
             var rootVC = storyboard.instantiateInitialViewController() as GameViewController
             window!.rootViewController = rootVC
-        } else {
+        } else if IS_IPHONE6PLUS {
             var storyboard = UIStoryboard(name: "iPhone6Plus", bundle: nil)
             var rootVC = storyboard.instantiateInitialViewController() as GameViewController
             window!.rootViewController = rootVC
             println("iPhone6Plus")
+        } else if IS_IPAD {
+            var storyboard = UIStoryboard(name: "iPad", bundle: nil)
+            var rootVC = storyboard.instantiateInitialViewController() as GameViewController
+            window!.rootViewController = rootVC
+            println("iPad")
+        } else {
+            var storyboard = UIStoryboard(name: "iPhone4s", bundle: nil)
+            var rootVC = storyboard.instantiateInitialViewController() as GameViewController
+            window!.rootViewController = rootVC
+            println("3.5 in screen")
         }
         window!.makeKeyAndVisible()
 

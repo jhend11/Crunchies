@@ -16,9 +16,11 @@ import CoreMotion
 
 let SCREEN_HEIGHT = UIScreen.mainScreen().bounds.size.height
 let SCREEN_WIDTH = UIScreen.mainScreen().bounds.size.width
+let IS_IPHONE4 = UIScreen.mainScreen().bounds.size.height == 480
 let IS_IPHONE5 = UIScreen.mainScreen().bounds.size.height == 568
 let IS_IPHONE6 = UIScreen.mainScreen().bounds.size.height == 667
 let IS_IPHONE6PLUS = UIScreen.mainScreen().bounds.size.height == 736
+let IS_IPAD = UIScreen.mainScreen().bounds.size.height == 1024
 
 
 extension SKNode {
@@ -153,8 +155,11 @@ class GameViewController: UIViewController, ADBannerViewDelegate {
         } else if IS_IPHONE6 {
             bannerView.frame = CGRectMake(0, 617, 320, 50)
             
-        } else {
+        } else if IS_IPHONE6PLUS {
             bannerView.frame = CGRectMake(0, 696, 320, 50)
+        } else {
+            bannerView.frame = CGRectMake(0, 430, 320, 50)
+
         }
 //        self.view.addSubview(bannerView)
         

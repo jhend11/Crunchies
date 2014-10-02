@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JvW-cQ-yQ2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="clY-1W-WM5">
+            <objects>
+                <viewController storyboardIdentifier="iPad" id="JvW-cQ-yQ2" customClass="GameViewController" customModule="Crunchies" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pvx-za-JtA"/>
+                        <viewControllerLayoutGuide type="bottom" id="eIp-w5-nsN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4yq-I1-7OL" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iLe-TS-TeJ">
+                                <rect key="frame" x="10" y="209" width="300" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="8Kx-0n-PKc"/>
+                                    <constraint firstAttribute="height" constant="150" id="LLk-tk-Fe6"/>
+                                    <constraint firstAttribute="width" constant="300" id="Zkw-p3-02x"/>
+                                    <constraint firstAttribute="width" constant="300" id="dxf-8J-LYx"/>
+                                    <constraint firstAttribute="height" constant="150" id="kRR-dz-Nh8"/>
+                                    <constraint firstAttribute="height" constant="150" id="rZ0-2q-bcY"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8Kx-0n-PKc"/>
+                                        <exclude reference="dxf-8J-LYx"/>
+                                        <exclude reference="kRR-dz-Nh8"/>
+                                        <exclude reference="rZ0-2q-bcY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="LLk-tk-Fe6"/>
+                                        <exclude reference="Zkw-p3-02x"/>
+                                        <include reference="dxf-8J-LYx"/>
+                                        <include reference="rZ0-2q-bcY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="8Kx-0n-PKc"/>
+                                        <exclude reference="LLk-tk-Fe6"/>
+                                        <exclude reference="Zkw-p3-02x"/>
+                                        <include reference="kRR-dz-Nh8"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gc-bS-Uy7">
+                                <rect key="frame" x="85" y="460" width="430" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="plD-Hd-ZAx"/>
+                                    <constraint firstAttribute="width" constant="236" id="yJ9-hc-rjJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="29"/>
+                                <state key="normal" title="Shuffle" backgroundImage="Button"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="plD-Hd-ZAx"/>
+                                        <exclude reference="yJ9-hc-rjJ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="plD-Hd-ZAx"/>
+                                        <include reference="yJ9-hc-rjJ"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="shuffleButtonPressed:" destination="JvW-cQ-yQ2" eventType="touchUpInside" id="ZSo-py-TdV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qf0-cF-MTb">
+                                <rect key="frame" x="212" y="90" width="50" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="412" y="119" width="50" height="21"/>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="228" y="110" width="58" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHe-id-6NJ">
+                                <rect key="frame" x="116" y="90" width="58" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="316" y="119" width="58" height="21"/>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="122" y="110" width="58" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7W3-IY-kcM">
+                                <rect key="frame" x="306" y="90" width="50" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="506" y="119" width="50" height="21"/>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="332" y="110" width="58" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fo7-CP-sJE">
+                                <rect key="frame" x="17.5" y="66" width="70" height="20"/>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.69019607839999997" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="Goal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="218" y="95" width="70" height="20"/>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="18" y="86" width="70" height="20"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIO-TP-NKR">
+                                <rect key="frame" x="110" y="66" width="70" height="20"/>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.69019607839999997" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="Swaps">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="310" y="95" width="70" height="20"/>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="122" y="86" width="70" height="20"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3N-zF-XqC">
+                                <rect key="frame" x="202" y="66" width="70" height="20"/>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.69019607839999997" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="Score">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="402" y="95" width="70" height="20"/>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="228" y="86" width="70" height="20"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeU-z9-X8n">
+                                <rect key="frame" x="294" y="66" width="70" height="20"/>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.69019607839999997" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="Level">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="494" y="95" width="70" height="20"/>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="332" y="86" width="70" height="20"/>
+                                </variation>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBN-4q-uzC">
+                                <rect key="frame" x="20" y="90" width="66" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="220" y="119" width="66" height="21"/>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="110" width="58" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iLe-TS-TeJ" firstAttribute="leading" secondItem="4yq-I1-7OL" secondAttribute="leadingMargin" constant="-6" id="9O7-zG-EEU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iLe-TS-TeJ" secondAttribute="trailing" constant="34" id="BQE-ji-HHM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1gc-bS-Uy7" secondAttribute="trailing" constant="66" id="DZC-bb-LpD"/>
+                            <constraint firstItem="iLe-TS-TeJ" firstAttribute="top" secondItem="4yq-I1-7OL" secondAttribute="topMargin" constant="217" id="EpM-RE-Qzx"/>
+                            <constraint firstItem="1gc-bS-Uy7" firstAttribute="leading" secondItem="4yq-I1-7OL" secondAttribute="leadingMargin" constant="66" id="KZ7-g8-3vC"/>
+                            <constraint firstItem="eIp-w5-nsN" firstAttribute="top" secondItem="1gc-bS-Uy7" secondAttribute="bottom" constant="57" id="LgB-2a-9F7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iLe-TS-TeJ" secondAttribute="trailing" constant="134" id="VaN-Uh-kOr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1gc-bS-Uy7" secondAttribute="trailing" constant="69" id="XF9-do-1tU"/>
+                            <constraint firstItem="eIp-w5-nsN" firstAttribute="top" secondItem="1gc-bS-Uy7" secondAttribute="bottom" constant="72" id="Zg7-e6-Fqn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iLe-TS-TeJ" secondAttribute="trailing" constant="-6" id="jPz-vL-JmQ"/>
+                            <constraint firstItem="iLe-TS-TeJ" firstAttribute="leading" secondItem="4yq-I1-7OL" secondAttribute="leadingMargin" constant="34" id="lVM-Wu-NwC"/>
+                            <constraint firstItem="iLe-TS-TeJ" firstAttribute="leading" secondItem="4yq-I1-7OL" secondAttribute="leadingMargin" constant="134" id="lbF-LZ-6P9"/>
+                            <constraint firstItem="iLe-TS-TeJ" firstAttribute="top" secondItem="4yq-I1-7OL" secondAttribute="topMargin" constant="218" id="p0Y-sC-WBp"/>
+                            <constraint firstItem="1gc-bS-Uy7" firstAttribute="leading" secondItem="4yq-I1-7OL" secondAttribute="leadingMargin" constant="69" id="tf3-2V-RFC"/>
+                            <constraint firstItem="iLe-TS-TeJ" firstAttribute="top" secondItem="4yq-I1-7OL" secondAttribute="topMargin" constant="209" id="vhQ-nK-Rd9"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="BQE-ji-HHM"/>
+                                <exclude reference="EpM-RE-Qzx"/>
+                                <exclude reference="VaN-Uh-kOr"/>
+                                <exclude reference="lVM-Wu-NwC"/>
+                                <exclude reference="lbF-LZ-6P9"/>
+                                <exclude reference="p0Y-sC-WBp"/>
+                                <exclude reference="DZC-bb-LpD"/>
+                                <exclude reference="KZ7-g8-3vC"/>
+                                <exclude reference="LgB-2a-9F7"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="9O7-zG-EEU"/>
+                                <include reference="EpM-RE-Qzx"/>
+                                <include reference="VaN-Uh-kOr"/>
+                                <exclude reference="jPz-vL-JmQ"/>
+                                <include reference="lbF-LZ-6P9"/>
+                                <exclude reference="vhQ-nK-Rd9"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="9O7-zG-EEU"/>
+                                <include reference="BQE-ji-HHM"/>
+                                <exclude reference="jPz-vL-JmQ"/>
+                                <include reference="lVM-Wu-NwC"/>
+                                <include reference="p0Y-sC-WBp"/>
+                                <exclude reference="vhQ-nK-Rd9"/>
+                                <include reference="DZC-bb-LpD"/>
+                                <include reference="KZ7-g8-3vC"/>
+                                <exclude reference="XF9-do-1tU"/>
+                                <exclude reference="tf3-2V-RFC"/>
+                                <include reference="LgB-2a-9F7"/>
+                                <exclude reference="Zg7-e6-Fqn"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="dKA-sQ-kSU"/>
+                    <connections>
+                        <outlet property="gameOverPanel" destination="iLe-TS-TeJ" id="SCD-PK-6hN"/>
+                        <outlet property="levelLabel" destination="7W3-IY-kcM" id="Qza-JN-Z6j"/>
+                        <outlet property="movesLabel" destination="MHe-id-6NJ" id="c2j-Fv-uX6"/>
+                        <outlet property="scoreLabel" destination="Qf0-cF-MTb" id="t7S-6m-mEE"/>
+                        <outlet property="shuffleButton" destination="1gc-bS-Uy7" id="cyI-7J-nnb"/>
+                        <outlet property="targetLabel" destination="DBN-4q-uzC" id="BEF-rJ-v4q"/>
+                        <segue destination="VPE-QB-afY" kind="presentation" identifier="resetGameElfin" id="vN9-Fa-6VW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bXd-MN-fOy" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-330" y="320"/>
+        </scene>
+        <!--Game Reset View Controller-->
+        <scene sceneID="ylY-UG-Y5n">
+            <objects>
+                <viewController id="VPE-QB-afY" customClass="GameResetViewController" customModule="Crunchies" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wjA-pq-jyO"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Va-bb-J1e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DF4-bc-2Rw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="reK-8t-3jU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="579" y="281"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Button" width="100" height="36"/>
+    </resources>
+</document>

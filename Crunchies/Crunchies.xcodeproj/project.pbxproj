@@ -13,6 +13,8 @@
 		B400036F19DCB369009BF068 /* Level_7.json in Resources */ = {isa = PBXBuildFile; fileRef = B400036E19DCB369009BF068 /* Level_7.json */; };
 		B400037119DCB37E009BF068 /* Level_8.json in Resources */ = {isa = PBXBuildFile; fileRef = B400037019DCB37E009BF068 /* Level_8.json */; };
 		B400037319DCB396009BF068 /* Level_9.json in Resources */ = {isa = PBXBuildFile; fileRef = B400037219DCB396009BF068 /* Level_9.json */; };
+		B400037519DD7B6F009BF068 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B400037419DD7B6F009BF068 /* iPad.storyboard */; };
+		B400037719DD7F51009BF068 /* iPhone4s.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B400037619DD7F51009BF068 /* iPhone4s.storyboard */; };
 		B4B3338419D239A300FC75E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B3338319D239A300FC75E3 /* AppDelegate.swift */; };
 		B4B3338819D239A300FC75E3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B3338719D239A300FC75E3 /* GameScene.swift */; };
 		B4B3338A19D239A300FC75E3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B3338919D239A300FC75E3 /* GameViewController.swift */; };
@@ -76,6 +78,8 @@
 		B400036E19DCB369009BF068 /* Level_7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_7.json; sourceTree = "<group>"; };
 		B400037019DCB37E009BF068 /* Level_8.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_8.json; sourceTree = "<group>"; };
 		B400037219DCB396009BF068 /* Level_9.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_9.json; sourceTree = "<group>"; };
+		B400037419DD7B6F009BF068 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
+		B400037619DD7F51009BF068 /* iPhone4s.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone4s.storyboard; sourceTree = "<group>"; };
 		B4B3337E19D239A300FC75E3 /* Crunchies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crunchies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B3338219D239A300FC75E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4B3338319D239A300FC75E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -181,9 +185,11 @@
 				B4B333C619D242AA00FC75E3 /* Extensions.swift */,
 				B4B333C419D2421D00FC75E3 /* Tile.swift */,
 				B4B333B519D23E2D00FC75E3 /* Set.swift */,
+				B400037419DD7B6F009BF068 /* iPad.storyboard */,
 				B400036419DCA40F009BF068 /* iPhone6Plus.storyboard */,
 				B4B334AF19D8BFA800FC75E3 /* iPhone6.storyboard */,
 				B4B3338B19D239A300FC75E3 /* Main.storyboard */,
+				B400037619DD7F51009BF068 /* iPhone4s.storyboard */,
 				B4B3338E19D239A300FC75E3 /* Images.xcassets */,
 				B4B333E919D3786B00FC75E3 /* WinterSprites.atlas */,
 				B4B333CE19D25E0400FC75E3 /* Sounds */,
@@ -377,6 +383,7 @@
 				B4B333BF19D241E400FC75E3 /* Level_0.json in Resources */,
 				B400036519DCA40F009BF068 /* iPhone6Plus.storyboard in Resources */,
 				B4B333FB19D3786B00FC75E3 /* Present@2x.png in Resources */,
+				B400037719DD7F51009BF068 /* iPhone4s.storyboard in Resources */,
 				B400037119DCB37E009BF068 /* Level_8.json in Resources */,
 				B400036C19DCB342009BF068 /* Level_6.json in Resources */,
 				B4B333FC19D3786B00FC75E3 /* Rudolph-Highlighted@2x.png in Resources */,
@@ -386,6 +393,7 @@
 				B4B333D519D25E0400FC75E3 /* Chomp.wav in Resources */,
 				B4B334B019D8BFA800FC75E3 /* iPhone6.storyboard in Resources */,
 				B4B333D619D25E0400FC75E3 /* Drip.wav in Resources */,
+				B400037519DD7B6F009BF068 /* iPad.storyboard in Resources */,
 				B4B333F919D3786B00FC75E3 /* GingerbreadMan@2x.png in Resources */,
 				B4B3338D19D239A300FC75E3 /* Main.storyboard in Resources */,
 				B4B333F619D3786B00FC75E3 /* CandyCane-Highlighted@2x.png in Resources */,

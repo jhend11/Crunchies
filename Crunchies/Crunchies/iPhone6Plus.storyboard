@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="L15-hq-aM3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Sty-9g-umT" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVw-zY-6ma">
@@ -149,7 +149,7 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QiQ-vJ-fdJ">
-                                <rect key="frame" x="85" y="460" width="150" height="36"/>
+                                <rect key="frame" x="85" y="460" width="430" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="8Zr-0H-Cck"/>
                                     <constraint firstAttribute="width" constant="236" id="CkV-2h-Ke0"/>
@@ -239,7 +239,7 @@
                         <viewControllerLayoutGuide type="bottom" id="nhe-FZ-3yt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bSq-dA-ld4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

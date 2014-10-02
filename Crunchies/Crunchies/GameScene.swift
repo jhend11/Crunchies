@@ -99,8 +99,9 @@ class GameScene: SKScene {
         
         if IS_IPHONE5 {
             gameLayer.setScale(1.0)
-
-        } else {
+        }else if IS_IPHONE4 {
+            gameLayer.setScale(0.9)
+        }else {
             gameLayer.setScale(1.2)
         }
         
