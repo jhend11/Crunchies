@@ -8,7 +8,7 @@
         <!--Game View Controller-->
         <scene sceneID="clY-1W-WM5">
             <objects>
-                <viewController storyboardIdentifier="iPad" id="JvW-cQ-yQ2" customClass="GameViewController" customModule="Crunchies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="iPad" id="JvW-cQ-yQ2" customClass="GameViewController" customModule="Winter_Swap_temp_casesensitive_rename" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pvx-za-JtA"/>
                         <viewControllerLayoutGuide type="bottom" id="eIp-w5-nsN"/>
@@ -307,7 +307,7 @@
         <!--Game Reset View Controller-->
         <scene sceneID="ylY-UG-Y5n">
             <objects>
-                <viewController id="VPE-QB-afY" customClass="GameResetViewController" customModule="Crunchies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VPE-QB-afY" customClass="GameResetViewController" customModule="Winter_Swap_temp_casesensitive_rename" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wjA-pq-jyO"/>
                         <viewControllerLayoutGuide type="bottom" id="8Va-bb-J1e"/>

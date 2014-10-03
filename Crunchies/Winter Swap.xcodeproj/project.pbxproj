@@ -23,7 +23,6 @@
 		B4B3338D19D239A300FC75E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4B3338B19D239A300FC75E3 /* Main.storyboard */; };
 		B4B3338F19D239A300FC75E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B3338E19D239A300FC75E3 /* Images.xcassets */; };
 		B4B3339219D239A300FC75E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B3339019D239A300FC75E3 /* LaunchScreen.xib */; };
-		B4B3339E19D239A300FC75E3 /* CrunchiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B3339D19D239A300FC75E3 /* CrunchiesTests.swift */; };
 		B4B333A819D239FD00FC75E3 /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = B4B333A719D239FD00FC75E3 /* Sprites.atlas */; };
 		B4B333B219D23B9A00FC75E3 /* Cookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B333B119D23B9A00FC75E3 /* Cookie.swift */; };
 		B4B333B419D23DB400FC75E3 /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B333B319D23DB400FC75E3 /* Array2D.swift */; };
@@ -61,16 +60,6 @@
 		B4B3350C19DA204200FC75E3 /* GameResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B3350B19DA204200FC75E3 /* GameResetViewController.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		B4B3339819D239A300FC75E3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B4B3337619D239A300FC75E3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B4B3337D19D239A300FC75E3;
-			remoteInfo = Crunchies;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		B400036419DCA40F009BF068 /* iPhone6Plus.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone6Plus.storyboard; sourceTree = "<group>"; };
 		B400036619DCB309009BF068 /* Level_5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level_5.json; sourceTree = "<group>"; };
@@ -82,7 +71,7 @@
 		B400037619DD7F51009BF068 /* iPhone4s.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone4s.storyboard; sourceTree = "<group>"; };
 		B400037819DDD41B009BF068 /* highbell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = highbell.mp3; sourceTree = "<group>"; };
 		B400037A19DDE090009BF068 /* coinbag.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coinbag.wav; sourceTree = "<group>"; };
-		B4B3337E19D239A300FC75E3 /* Crunchies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crunchies.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4B3337E19D239A300FC75E3 /* Winter Swap.temp_casesensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Winter Swap.temp_casesensitive_rename.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B3338219D239A300FC75E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4B3338319D239A300FC75E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4B3338719D239A300FC75E3 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -90,7 +79,6 @@
 		B4B3338C19D239A300FC75E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4B3338E19D239A300FC75E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B4B3339119D239A300FC75E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		B4B3339719D239A300FC75E3 /* CrunchiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrunchiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B3339C19D239A300FC75E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4B3339D19D239A300FC75E3 /* CrunchiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrunchiesTests.swift; sourceTree = "<group>"; };
 		B4B333A719D239FD00FC75E3 /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Sprites.atlas; sourceTree = "<group>"; };
@@ -140,13 +128,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4B3339419D239A300FC75E3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -164,8 +145,7 @@
 		B4B3337F19D239A300FC75E3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B4B3337E19D239A300FC75E3 /* Crunchies.app */,
-				B4B3339719D239A300FC75E3 /* CrunchiesTests.xctest */,
+				B4B3337E19D239A300FC75E3 /* Winter Swap.temp_casesensitive_rename.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -280,9 +260,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B4B3337D19D239A300FC75E3 /* Crunchies */ = {
+		B4B3337D19D239A300FC75E3 /* Winter Swap.temp_casesensitive_rename */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B4B333A119D239A300FC75E3 /* Build configuration list for PBXNativeTarget "Crunchies" */;
+			buildConfigurationList = B4B333A119D239A300FC75E3 /* Build configuration list for PBXNativeTarget "Winter Swap.temp_casesensitive_rename" */;
 			buildPhases = (
 				B4B3337A19D239A300FC75E3 /* Sources */,
 				B4B3337B19D239A300FC75E3 /* Frameworks */,
@@ -293,28 +273,10 @@
 			);
 			dependencies = (
 			);
-			name = Crunchies;
+			name = "Winter Swap.temp_casesensitive_rename";
 			productName = Crunchies;
-			productReference = B4B3337E19D239A300FC75E3 /* Crunchies.app */;
+			productReference = B4B3337E19D239A300FC75E3 /* Winter Swap.temp_casesensitive_rename.app */;
 			productType = "com.apple.product-type.application";
-		};
-		B4B3339619D239A300FC75E3 /* CrunchiesTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B4B333A419D239A300FC75E3 /* Build configuration list for PBXNativeTarget "CrunchiesTests" */;
-			buildPhases = (
-				B4B3339319D239A300FC75E3 /* Sources */,
-				B4B3339419D239A300FC75E3 /* Frameworks */,
-				B4B3339519D239A300FC75E3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B4B3339919D239A300FC75E3 /* PBXTargetDependency */,
-			);
-			name = CrunchiesTests;
-			productName = CrunchiesTests;
-			productReference = B4B3339719D239A300FC75E3 /* CrunchiesTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -334,13 +296,9 @@
 							};
 						};
 					};
-					B4B3339619D239A300FC75E3 = {
-						CreatedOnToolsVersion = 6.0.1;
-						TestTargetID = B4B3337D19D239A300FC75E3;
-					};
 				};
 			};
-			buildConfigurationList = B4B3337919D239A300FC75E3 /* Build configuration list for PBXProject "Crunchies" */;
+			buildConfigurationList = B4B3337919D239A300FC75E3 /* Build configuration list for PBXProject "Winter Swap" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -353,8 +311,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B4B3337D19D239A300FC75E3 /* Crunchies */,
-				B4B3339619D239A300FC75E3 /* CrunchiesTests */,
+				B4B3337D19D239A300FC75E3 /* Winter Swap.temp_casesensitive_rename */,
 			);
 		};
 /* End PBXProject section */
@@ -404,13 +361,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4B3339519D239A300FC75E3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -449,23 +399,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4B3339319D239A300FC75E3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B4B3339E19D239A300FC75E3 /* CrunchiesTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B4B3339919D239A300FC75E3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B4B3337D19D239A300FC75E3 /* Crunchies */;
-			targetProxy = B4B3339819D239A300FC75E3 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B4B3338B19D239A300FC75E3 /* Main.storyboard */ = {
@@ -570,13 +504,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Crunchies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Winter Swap.temp_casesensitive_rename";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -587,55 +522,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Crunchies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Winter Swap.temp_casesensitive_rename";
 				PROVISIONING_PROFILE = "";
-			};
-			name = Release;
-		};
-		B4B333A519D239A300FC75E3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CrunchiesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Crunchies.app/Crunchies";
-			};
-			name = Debug;
-		};
-		B4B333A619D239A300FC75E3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CrunchiesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Crunchies.app/Crunchies";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B4B3337919D239A300FC75E3 /* Build configuration list for PBXProject "Crunchies" */ = {
+		B4B3337919D239A300FC75E3 /* Build configuration list for PBXProject "Winter Swap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B4B3339F19D239A300FC75E3 /* Debug */,
@@ -644,20 +546,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B4B333A119D239A300FC75E3 /* Build configuration list for PBXNativeTarget "Crunchies" */ = {
+		B4B333A119D239A300FC75E3 /* Build configuration list for PBXNativeTarget "Winter Swap.temp_casesensitive_rename" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B4B333A219D239A300FC75E3 /* Debug */,
 				B4B333A319D239A300FC75E3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B4B333A419D239A300FC75E3 /* Build configuration list for PBXNativeTarget "CrunchiesTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B4B333A519D239A300FC75E3 /* Debug */,
-				B4B333A619D239A300FC75E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

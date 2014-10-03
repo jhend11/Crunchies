@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B4B3337D19D239A300FC75E3"
-               BuildableName = "Crunchies.app"
-               BlueprintName = "Crunchies"
-               ReferencedContainer = "container:Crunchies.xcodeproj">
+               BuildableName = "Winter Swap.temp_casesensitive_rename.app"
+               BlueprintName = "Winter Swap.temp_casesensitive_rename"
+               ReferencedContainer = "container:Winter Swap.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B4B3339619D239A300FC75E3"
-               BuildableName = "CrunchiesTests.xctest"
-               BlueprintName = "CrunchiesTests"
-               ReferencedContainer = "container:Crunchies.xcodeproj">
+               BuildableName = "Winter Swap.temp_caseinsensitive_renameTests.xctest"
+               BlueprintName = "Winter Swap.temp_caseinsensitive_renameTests"
+               ReferencedContainer = "container:Winter Swap.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B4B3339619D239A300FC75E3"
-               BuildableName = "CrunchiesTests.xctest"
-               BlueprintName = "CrunchiesTests"
-               ReferencedContainer = "container:Crunchies.xcodeproj">
+               BuildableName = "Winter Swap.temp_caseinsensitive_renameTests.xctest"
+               BlueprintName = "Winter Swap.temp_caseinsensitive_renameTests"
+               ReferencedContainer = "container:Winter Swap.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B4B3337D19D239A300FC75E3"
-            BuildableName = "Crunchies.app"
-            BlueprintName = "Crunchies"
-            ReferencedContainer = "container:Crunchies.xcodeproj">
+            BuildableName = "Winter Swap.temp_casesensitive_rename.app"
+            BlueprintName = "Winter Swap.temp_casesensitive_rename"
+            ReferencedContainer = "container:Winter Swap.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B4B3337D19D239A300FC75E3"
-            BuildableName = "Crunchies.app"
-            BlueprintName = "Crunchies"
-            ReferencedContainer = "container:Crunchies.xcodeproj">
+            BuildableName = "Winter Swap.temp_casesensitive_rename.app"
+            BlueprintName = "Winter Swap.temp_casesensitive_rename"
+            ReferencedContainer = "container:Winter Swap.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B4B3337D19D239A300FC75E3"
-            BuildableName = "Crunchies.app"
-            BlueprintName = "Crunchies"
-            ReferencedContainer = "container:Crunchies.xcodeproj">
+            BuildableName = "Winter Swap.temp_casesensitive_rename.app"
+            BlueprintName = "Winter Swap.temp_casesensitive_rename"
+            ReferencedContainer = "container:Winter Swap.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
