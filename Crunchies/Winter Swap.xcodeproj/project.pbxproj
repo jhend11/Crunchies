@@ -17,6 +17,14 @@
 		B400037719DD7F51009BF068 /* iPhone4s.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B400037619DD7F51009BF068 /* iPhone4s.storyboard */; };
 		B400037919DDD41B009BF068 /* highbell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B400037819DDD41B009BF068 /* highbell.mp3 */; };
 		B400037B19DDE090009BF068 /* coinbag.wav in Resources */ = {isa = PBXBuildFile; fileRef = B400037A19DDE090009BF068 /* coinbag.wav */; };
+		B408778B19E2370400DB7636 /* Backgroundthing2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B408778A19E2370400DB7636 /* Backgroundthing2@2x.png */; };
+		B408778D19E2371000DB7636 /* Backgroundthing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B408778C19E2371000DB7636 /* Backgroundthing@2x.png */; };
+		B408778F19E2CF4F00DB7636 /* Button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B408778E19E2CF4F00DB7636 /* Button@2x.png */; };
+		B408779119E2CF6000DB7636 /* elfinIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B408779019E2CF6000DB7636 /* elfinIcon@2x.png */; };
+		B408779319E2CF7000DB7636 /* GameOver@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B408779219E2CF7000DB7636 /* GameOver@2x.png */; };
+		B408779519E2CF7E00DB7636 /* LevelComplete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B408779419E2CF7E00DB7636 /* LevelComplete@2x.png */; };
+		B408779719E2CF8F00DB7636 /* NoElfinWay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B408779619E2CF8F00DB7636 /* NoElfinWay@2x.png */; };
+		B408779919E2CFA100DB7636 /* Normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B408779819E2CFA100DB7636 /* Normal@2x.png */; };
 		B4B3338419D239A300FC75E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B3338319D239A300FC75E3 /* AppDelegate.swift */; };
 		B4B3338819D239A300FC75E3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B3338719D239A300FC75E3 /* GameScene.swift */; };
 		B4B3338A19D239A300FC75E3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B3338919D239A300FC75E3 /* GameViewController.swift */; };
@@ -71,6 +79,14 @@
 		B400037619DD7F51009BF068 /* iPhone4s.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone4s.storyboard; sourceTree = "<group>"; };
 		B400037819DDD41B009BF068 /* highbell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = highbell.mp3; sourceTree = "<group>"; };
 		B400037A19DDE090009BF068 /* coinbag.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coinbag.wav; sourceTree = "<group>"; };
+		B408778A19E2370400DB7636 /* Backgroundthing2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Backgroundthing2@2x.png"; path = "Crunchies/Images.xcassets/Backgroundthing2.imageset/Backgroundthing2@2x.png"; sourceTree = "<group>"; };
+		B408778C19E2371000DB7636 /* Backgroundthing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Backgroundthing@2x.png"; path = "Crunchies/Images.xcassets/Backgroundthing.imageset/Backgroundthing@2x.png"; sourceTree = "<group>"; };
+		B408778E19E2CF4F00DB7636 /* Button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button@2x.png"; sourceTree = "<group>"; };
+		B408779019E2CF6000DB7636 /* elfinIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "elfinIcon@2x.png"; sourceTree = "<group>"; };
+		B408779219E2CF7000DB7636 /* GameOver@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GameOver@2x.png"; sourceTree = "<group>"; };
+		B408779419E2CF7E00DB7636 /* LevelComplete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LevelComplete@2x.png"; sourceTree = "<group>"; };
+		B408779619E2CF8F00DB7636 /* NoElfinWay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NoElfinWay@2x.png"; sourceTree = "<group>"; };
+		B408779819E2CFA100DB7636 /* Normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Normal@2x.png"; sourceTree = "<group>"; };
 		B4B3337E19D239A300FC75E3 /* Winter Swap.temp_casesensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Winter Swap.temp_casesensitive_rename.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B3338219D239A300FC75E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4B3338319D239A300FC75E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,9 +147,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B408777D19E2367E00DB7636 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B408778C19E2371000DB7636 /* Backgroundthing@2x.png */,
+				B408778A19E2370400DB7636 /* Backgroundthing2@2x.png */,
+				B408778E19E2CF4F00DB7636 /* Button@2x.png */,
+				B408779019E2CF6000DB7636 /* elfinIcon@2x.png */,
+				B408779219E2CF7000DB7636 /* GameOver@2x.png */,
+				B408779419E2CF7E00DB7636 /* LevelComplete@2x.png */,
+				B408779619E2CF8F00DB7636 /* NoElfinWay@2x.png */,
+				B408779819E2CFA100DB7636 /* Normal@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		B4B3337519D239A300FC75E3 = {
 			isa = PBXGroup;
 			children = (
+				B408777D19E2367E00DB7636 /* Images */,
 				B4B334AD19D73A4A00FC75E3 /* GameKit.framework */,
 				B4B333E719D34EBB00FC75E3 /* Crashlytics.framework */,
 				B4B3338019D239A300FC75E3 /* Crunchies */,
@@ -321,20 +353,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B408778B19E2370400DB7636 /* Backgroundthing2@2x.png in Resources */,
+				B408779919E2CFA100DB7636 /* Normal@2x.png in Resources */,
 				B400036819DCB309009BF068 /* Level_5.json in Resources */,
+				B408778D19E2371000DB7636 /* Backgroundthing@2x.png in Resources */,
 				B4B3339219D239A300FC75E3 /* LaunchScreen.xib in Resources */,
+				B408779119E2CF6000DB7636 /* elfinIcon@2x.png in Resources */,
 				B4B333FD19D3786B00FC75E3 /* Rudolph@2x.png in Resources */,
 				B4B333FF19D3786B00FC75E3 /* Snowman@2x.png in Resources */,
 				B4B333C319D241E400FC75E3 /* Level_4.json in Resources */,
 				B4B3340119D3786B00FC75E3 /* Tree@2x.png in Resources */,
+				B408779319E2CF7000DB7636 /* GameOver@2x.png in Resources */,
 				B400036F19DCB369009BF068 /* Level_7.json in Resources */,
 				B4B3340019D3786B00FC75E3 /* Tree-Highlighted@2x.png in Resources */,
 				B4B3343919D4BA5500FC75E3 /* happyland_128.mp3 in Resources */,
 				B4B333D719D25E0400FC75E3 /* Error.wav in Resources */,
 				B4B333DA19D25E0400FC75E3 /* Scrape.wav in Resources */,
+				B408778F19E2CF4F00DB7636 /* Button@2x.png in Resources */,
 				B4B333F719D3786B00FC75E3 /* CandyCane@2x.png in Resources */,
 				B4B333C119D241E400FC75E3 /* Level_2.json in Resources */,
 				B4B333CD19D2588900FC75E3 /* Grid.atlas in Resources */,
+				B408779519E2CF7E00DB7636 /* LevelComplete@2x.png in Resources */,
 				B4B333FA19D3786B00FC75E3 /* Present-Highlighted@2x.png in Resources */,
 				B4B333BF19D241E400FC75E3 /* Level_0.json in Resources */,
 				B400036519DCA40F009BF068 /* iPhone6Plus.storyboard in Resources */,
@@ -355,6 +394,7 @@
 				B400037B19DDE090009BF068 /* coinbag.wav in Resources */,
 				B4B333F619D3786B00FC75E3 /* CandyCane-Highlighted@2x.png in Resources */,
 				B4B333C019D241E400FC75E3 /* Level_1.json in Resources */,
+				B408779719E2CF8F00DB7636 /* NoElfinWay@2x.png in Resources */,
 				B4B333F819D3786B00FC75E3 /* GingerbreadMan-Highlighted@2x.png in Resources */,
 				B4B333C219D241E400FC75E3 /* Level_3.json in Resources */,
 				B4B333A819D239FD00FC75E3 /* Sprites.atlas in Resources */,
