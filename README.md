@@ -23,6 +23,7 @@ Once the app is finished downloading, tap on the app icon.
 Match three or more winter-themed pieces to score points.
 * Once the point threshold for the level has been passed, the user moves on to the next level.
 * If all swaps have been used and point threshold is still not met, user repeats level.
+
 #### No-Elfin' Way gamemode
 Half the swaps of regular game mode with a sweet little elf in the corner reminding you how difficult it is.
 
