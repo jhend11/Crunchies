@@ -27,6 +27,9 @@ Match three or more winter-themed pieces to score points.
 #### No-Elfin' Way gamemode
 Half the swaps of regular game mode with a sweet little elf in the corner reminding you how difficult it is.
 
+#### Example gameplay
+![My image](http://appsmadeby.me/wp-content/uploads/2015/08/testgif.gif)
+
 # Framework Dependencies 
 
 #### Third Party Frameworks Used
