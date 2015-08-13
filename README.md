@@ -30,7 +30,6 @@ Half the swaps of regular game mode with a sweet little elf in the corner remind
 #### Example gameplay
 ![My image](http://appsmadeby.me/wp-content/uploads/2015/08/exgameplay.gif)
 
-
 # Support
 
 ## Found a bug?
